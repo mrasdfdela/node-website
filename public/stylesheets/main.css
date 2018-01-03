@@ -1,0 +1,55 @@
+body {
+	background: #FAFAFA;
+	font-family: 'Raleway', sans-serif;
+	color: #A63535;
+}
+
+p {
+	/*font-size: 10px;*/
+}
+
+li {
+	font-size: 11px;
+}
+
+.navbar {
+	padding: 0px 5%;
+}
+
+.navbar-under-banner {
+	margin-top: 22px;	
+}
+
+.dropdown-menu {
+	width: 200px;
+}
+
+hr {
+	border-color: #BEBEBE;
+	background-color: #BEBEBE;
+	color: #BEBEBE;
+}
+
+.row {
+	margin-top:90px;
+}
+
+.thumbnail {
+	border: 0px;
+	padding: 0px;
+	box-shadow: 2px 2px 5px #727884;	
+}
+
+#heading {
+	background: #FAFAFA;
+	color: #A63535;
+	text-align: center;
+	padding: 2px;
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+}
+
+#footer {
+	text-align: center;
+}
