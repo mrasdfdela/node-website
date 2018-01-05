@@ -16,6 +16,10 @@ app.get("/hiking", function(req, res) {
     res.render("hiking/hiking");
 });
 
+app.get("/contact", function(req,res){
+   res.render("contact"); 
+});
+
 app.get('/*',function(req, res)
 {
     res.send("This page in under construction. Hopefully. =/");
