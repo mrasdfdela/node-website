@@ -1,0 +1,60 @@
+<% include ../partials/header %>
+    <h1>You have reached the cycling page!</h1>
+    <p>I currently have a couple of ideas for this page:</p>
+    <ul>
+        <li>A training calculator, for FTP worksouts (easier)</li>
+        <li>An API that will download workout data from my <a href="https://www.strava.com">Strava</a> account, perform some set of calculations on it, and display the results (harder)</li>
+    </ul>
+    <p>Enter your FTP:</p>
+    <!--<p>If your FTP is:<span id="ftp"></span></p>-->
+    <form>
+        <input type="text" placeholder="200" id="formValueId" name="valueId"/>
+    </form><br>
+    <div class="container-fluid">
+        <div class="container col-lg-6">
+            <table id="ftpTable" class="table table-striped table-hover">
+                <tr>
+                    <th class=></th>
+                    <th>Training Zone</th>
+                    <th>Training Limits</th>
+                </tr>
+                <tr>
+                    <td>1 </td>
+                    <td>Recovery</td>
+                    <td><span id="recovery"></span></td>
+                </tr>
+                <tr>
+                    <td>2 </td>
+                    <td>Endurance</td>
+                    <td><span id="endurance"></span></td>
+                </tr>
+                <tr>
+                    <td>3 </td>
+                    <td>Tempo</td>
+                    <td><span id="tempo"></span></td>
+                </tr>
+                <tr>
+                    <td>4 </td>
+                    <td>Lactate Threshold</td>
+                    <td><span id="lactateThreshold"></span></td>
+                </tr>
+                <tr>
+                    <td>5 </td>
+                    <td>VO2 Max</td>
+                    <td><span id="vo2max"></span></td>
+                </tr>
+                <tr>
+                    <td>6 </td>
+                    <td>Anaerobic Capacity</td>
+                    <td><span id="anaerobicCapacity"></span></td>
+                </tr>
+                <tr>
+                    <td>7 </td>
+                    <td>Neuromuscular</td>
+                    <td><span id="neuromuscular"></span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p><a href="../contact">Let me know</a> if you have any other suggestions!</p>
+<% include ../partials/footer %>
