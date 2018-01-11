@@ -30,7 +30,7 @@ app.get("/contact", function(req,res){
 
 app.get('/*',function(req, res)
 {
-    res.send("This page in under construction. Hopefully. =/");
+    res.render("../error");
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
