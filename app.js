@@ -12,6 +12,14 @@ app.get("/", function(req, res) {
     res.render("index");
 });
 
+app.get("/journal", function(req,res){
+   res.render("journal"); 
+});
+
+app.get("/contact", function(req,res){
+   res.render("contact"); 
+});
+
 app.get("/cycling", function(req, res) {
     res.render("cycling/cycling");
 });
@@ -20,12 +28,8 @@ app.get("/hiking", function(req, res) {
     res.render("hiking/hiking");
 });
 
-app.get("/journal", function(req,res){
-   res.render("journal"); 
-});
-
-app.get("/contact", function(req,res){
-   res.render("contact"); 
+app.get("/tipcalculator", function(req, res) {
+    res.render("experimental/tipCalculator");
 });
 
 app.get('/*',function(req, res)

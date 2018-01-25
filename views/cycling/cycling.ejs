@@ -1,10 +1,7 @@
 <% include ../partials/header %>
     <h1>You have reached the cycling page!</h1>
-    <p>I currently have a couple of ideas for this page:</p>
-    <ul>
-        <li>A training calculator, for FTP worksouts (easier)</li>
-        <li>An API that will download workout data from my <a href="https://www.strava.com">Strava</a> account, perform some set of calculations on it, and display the results (harder)</li>
-    </ul>
+    <p>I've created this page as a cycling workout guide for myself. Many of the innovations in cycling (professional and otherwise) have taken the form of better data collection and setting quantitative targets with that data. Over the past few years, "Functional Threshold Power", or "FTP" has taken over as a primary measurement in cycling, both for training sessions and competitions. You can read more about it <a href="https://roadcyclinguk.com/how-to/six-things-need-know-training-zones.html">here.</a> </p>
+    <p>I'm starting my own jouney of using a power meter and my own FTP for my individual training sessions. I hope to fill this page over the next few weeks (I'm writing this text at 5:01 pm on 1/19/18!) with a page that will dynamically display different metrics and calculations for cycling training, in hopes that I can use the tool myself and start this coming spring season stronger than the last.</p>
     <p>Enter your FTP:</p>
     <!--<p>If your FTP is:<span id="ftp"></span></p>-->
     <form>
@@ -13,47 +10,50 @@
     <div class="container-fluid">
         <div class="container col-lg-6">
             <table id="ftpTable" class="table table-striped table-hover">
-                <tr>
-                    <th class=></th>
+                <tr title="title test!">
+                    <th></th>
                     <th>Training Zone</th>
                     <th>Training Limits</th>
                 </tr>
                 <tr>
                     <td>1 </td>
-                    <td>Recovery</td>
-                    <td><span id="recovery"></span></td>
+                    <td class="zoneNames"></td>
+                    <td class="zonesHR"></span></td>
                 </tr>
                 <tr>
                     <td>2 </td>
-                    <td>Endurance</td>
-                    <td><span id="endurance"></span></td>
+                    <td class="zoneNames"></td>
+                    <td class="zonesHR"></span></td>
                 </tr>
                 <tr>
                     <td>3 </td>
-                    <td>Tempo</td>
-                    <td><span id="tempo"></span></td>
+                    <td class="zoneNames"></td>
+                    <td class="zonesHR"></span></td>
                 </tr>
                 <tr>
                     <td>4 </td>
-                    <td>Lactate Threshold</td>
-                    <td><span id="lactateThreshold"></span></td>
+                    <td class="zoneNames"></td>
+                    <td class="zonesHR"></td>
                 </tr>
                 <tr>
                     <td>5 </td>
-                    <td>VO2 Max</td>
-                    <td><span id="vo2max"></span></td>
+                    <td class="zoneNames"></td>
+                    <td class="zonesHR"></td>
                 </tr>
                 <tr>
                     <td>6 </td>
-                    <td>Anaerobic Capacity</td>
-                    <td><span id="anaerobicCapacity"></span></td>
+                    <td class="zoneNames"></td>
+                    <td class="zonesHR"></td>
                 </tr>
                 <tr>
                     <td>7 </td>
-                    <td>Neuromuscular</td>
-                    <td><span id="neuromuscular"></span></td>
+                    <td class="zoneNames"></td>
+                    <td class="zonesHR"></td>
                 </tr>
             </table>
+        </div>
+        <div class="container col-lg-6">
+            
         </div>
     </div>
     <p><a href="../contact">Let me know</a> if you have any other suggestions!</p>
