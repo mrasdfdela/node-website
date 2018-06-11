@@ -8,17 +8,20 @@ html {
 }
 
 #billHeader{
+	position: fixed;
+	left: 0;
 	font-size: 2.7rem;
 	font-weight: 900;
 	
 	padding: 1rem 1rem;
-	margin: 0.5rem 0 1rem 0;
-}
+	margin: 0rem 0 1rem 0;
 
-/*#billHeader .col, #billHeader div {*/
-	/*background: gray !important;*/
-	/*background: gray !important;*/
-/*}*/
+	width: 100%;
+	background: #D6DBE8;
+	height: 10rem;
+	z-index: 2;
+	/*border-bottom: 20px solid gray*/
+}
 
 #billHeader div>div {
 	max-width: 30%;
@@ -28,19 +31,16 @@ html {
 #billHeader>div>div:first-of-type {
 	position: fixed;
 	left: 0;
-	/*background: gray;*/
 }
 
 #billHeader>div>div:nth-of-type(2) {
 	position: fixed;
 	left: 30%;	
-	/*background: gray;*/
 }
 
 #billHeader>div>div:nth-of-type(3) {
 	position: fixed;
 	left: 60%;	
-	/*background: gray;*/
 }
 
 #totalBillNums>div {
@@ -56,18 +56,23 @@ html {
 
 #totalBillNums input {
 	padding: 0 0.5rem;
-	line-height: 4rem;	
+	line-height: 4rem;
 }
 
 table {
-	/*background-color: red;*/
-	margin-top: 7rem;
-	/*padding-left: 0.5rem;*/
+	margin-top: 10rem;
 }
 
-#personRow {
+#personRow td {
 	background: #4F618F;
 	line-height: 100%;
+	position: sticky;
+	top: 10em;
+	z-index: 2;
+}
+
+#personRow td:first-of-type {
+	z-index: 3;
 }
 
 table input[type="text"] {
@@ -78,13 +83,17 @@ table input[type="text"] {
 	font-size: 2.5rem;
 }
 
-/*#personRow input[type="text"] {*/
+#personRow td:first-of-type {
+	background: #4F618F
+}
+
+#personRow input[type="text"] {
 	/*transform: rotate(-90deg)*/
-/*}*/
+	z-index: -1;
+}
 
 .dishRow input[type="text"] {
-	width: 90%;
-	margin-left: -1rem;
+	width: 100%;
 }
 
 table td {
@@ -99,8 +108,9 @@ table tr:nth-of-type(2n) {
 
 table tr td:first-of-type {
 	position: sticky;
-	left: 0.5rem;
-	/*margin-left: 0;*/
+	left: 0;
+	/*left: 0.5rem;*/
+	z-index: 1;
 }
 
 table tr td:last-of-type {
@@ -111,8 +121,8 @@ table tr td:last-of-type {
 }
 
 table input[type="checkbox"] {
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 4rem;
+	height: 4rem;
 }
 
 #totalsRow {
@@ -135,5 +145,9 @@ table input[type="checkbox"] {
 	margin-top: -1rem;
 }
 
-/*.fa-cart-plus {*/
-/*}*/
+footer {
+	font-size: 2rem;
+	position: fixed;
+	bottom: 0.2rem;
+	right: 0.2rem;
+}
