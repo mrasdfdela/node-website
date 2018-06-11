@@ -17,8 +17,8 @@
 			</div>
 			<div id="totalBillNums">
 				<div class="col"></div>
-				<div class="col"><input id="taxPercent" type="text" name="taxPercent" value="6.625"></div>
-				<div class="col"><input id="tipPercent" type="text" name="tipPercent" value="18"></div>
+				<div class="col"><input id="taxPercent" type="number" name="taxPercent" value="6.625"></div>
+				<div class="col"><input id="tipPercent" type="number" name="tipPercent" value="18"></div>
 				<div><span><i class="fa fa-user-plus"></i></span></div>
 			</div>
 		<!-- </div> -->
@@ -37,7 +37,9 @@
 						<td></td>
 					</tr>
 					<tr class="dishRow">
-						<td><input type="text" name="d0" placeholder="Dish Price"></td>
+						<td>
+							<input type="text" name="d0" placeholder="Dish Price">
+						</td>
 						<td><input type="checkbox" class="d0 p0" name=""></td>
 						<td><input type="checkbox" class="d0 p1" name=""></td>
 						<td class="dishSubTotal">-</td>
