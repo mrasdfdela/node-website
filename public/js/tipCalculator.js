@@ -1,7 +1,7 @@
 /* global $*/
 
 // Add new item/dish
-$(".fa-cart-plus").click(function(){
+$("#personRow td:first-of-type").click(function(){
 	var rowCount = $("tr").length - 2
 	$("table tr:nth-last-child(2)").after(
 		'<tr class="dishRow">'
@@ -42,6 +42,7 @@ $(".fa-user-plus").click(function(){
 	$("#totalsRow td:nth-last-child(2)").after(
 		'<td><p>-</p></td>'
 	)
+	$("#shoppingCart td:last-of-type").after('<td></td>')
 
 	checkListeners()
 	dishListeners()

@@ -17,7 +17,8 @@ html {
 	margin: 0rem 0 1rem 0;
 
 	width: 100%;
-	background: #D6DBE8;
+	/*background: #D6DBE8;*/
+	background: white;
 	height: 10rem;
 	z-index: 2;
 	/*border-bottom: 20px solid gray*/
@@ -111,13 +112,18 @@ table tr td:first-of-type {
 	left: 0;
 	/*left: 0.5rem;*/
 	z-index: 1;
+	width: 30%;
+}
+
+table tr td {
+	width: 30%;
 }
 
 table tr td:last-of-type {
 	min-width: 1rem;
 	/*width: -2rem;*/
 	text-align: center;
-
+	width: 10%;
 }
 
 table input[type="checkbox"] {
@@ -128,7 +134,7 @@ table input[type="checkbox"] {
 #totalsRow {
 	font-size: 2.5rem;
 	font-weight: bold;
-	line-height: 3.5rem;
+	line-height: 5rem;
 	/*margin: 2rem 0.1rem;*/
 	background:white;
 	border-top: 2px solid black;
@@ -139,15 +145,37 @@ table input[type="checkbox"] {
 	padding-right: 0em;
 }
 
-#shoppingCart {
-	text-align: center;
-	background: white;
-	margin-top: -1rem;
+
+#totalsRow td {
+	/*width: 100%;*/
+	/*text-align: right;*/
+	/*background: blue;*/
+	/*margin-top: -1rem;*/
+	/*margin-bottom: 5rem;*/
+	/*height: 10rem;*/
+
+	position: sticky;
+	bottom: 2rem;
+	background-color: white;
+	opacity: 0.9;
+
 }
 
 footer {
 	font-size: 2rem;
+	background-color: white;
+
 	position: fixed;
-	bottom: 0.2rem;
-	right: 0.2rem;
+	bottom: 0rem;
+	left: 0;
+	text-align: right;
+	width: 100%;
+	z-index: 1;
+}
+
+.fa-user-plus {
+	color: dimgray;
+}
+.fa-cutlery, .fa-plus {
+	color: silver;
 }
