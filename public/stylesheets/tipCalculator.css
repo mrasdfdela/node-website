@@ -9,16 +9,16 @@ html {
 
 #billHeader{
 	font-size: 2.7rem;
-	font-weight: 1000;
+	font-weight: 900;
 	
 	padding: 1rem 1rem;
 	margin: 0.5rem 0 1rem 0;
 }
 
-#billHeader .col, #billHeader div {
+/*#billHeader .col, #billHeader div {*/
 	/*background: gray !important;*/
 	/*background: gray !important;*/
-}
+/*}*/
 
 #billHeader div>div {
 	max-width: 30%;
@@ -78,9 +78,9 @@ table input[type="text"] {
 	font-size: 2.5rem;
 }
 
-#personRow input[type="text"] {
+/*#personRow input[type="text"] {*/
 	/*transform: rotate(-90deg)*/
-}
+/*}*/
 
 .dishRow input[type="text"] {
 	width: 90%;
@@ -135,5 +135,5 @@ table input[type="checkbox"] {
 	margin-top: -1rem;
 }
 
-.fa-cart-plus {
-}
+/*.fa-cart-plus {*/
+/*}*/
