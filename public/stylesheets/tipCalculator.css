@@ -4,83 +4,108 @@ html {
 
 #taxPercent, #tipPercent{
 	max-width: 10rem;
+	text-align: center;
 }
 
 #billHeader{
-	background: gray;
-	font-size: 2.7em;
-	font-weight: 800;
+	font-size: 2.7rem;
+	font-weight: 1000;
 	
-	position: fixed;
-	width: 100%;
-	max-width: 100%;
-	top: 0px;
-	left: 0px;
-	
-	padding: 0.3em 1em;
-	margin: 0.3em 0 0.3em 0;
+	padding: 1rem 1rem;
+	margin: 0.5rem 0 1rem 0;
 }
 
-.row {
-	padding: auto -30px !important;
-	margin: auto -30px !important;
+#billHeader .col, #billHeader div {
+	/*background: gray !important;*/
+	/*background: gray !important;*/
 }
 
 #billHeader div>div {
 	max-width: 30%;
-}
-
-#billHeader>div {
 	text-align: center;
 }
-#billHeader div div:last-of-type {
-	width: 1em;
-	padding: 0;
-	margin: 0;
-	text-align: right;
+
+#billHeader>div>div:first-of-type {
+	position: fixed;
+	left: 0;
+	/*background: gray;*/
 }
 
-fa-user-plus {
-	color: white;
+#billHeader>div>div:nth-of-type(2) {
+	position: fixed;
+	left: 30%;	
+	/*background: gray;*/
 }
 
-#totalBillNums {
-	padding-bottom: 2px;
+#billHeader>div>div:nth-of-type(3) {
+	position: fixed;
+	left: 60%;	
+	/*background: gray;*/
+}
+
+#totalBillNums>div {
+	position: fixed;
+	top: 5.5rem;
+}
+
+.fa-user-plus {
+	position: fixed;
+	right: 1.5rem;
+	padding-top: 1rem;
 }
 
 #totalBillNums input {
-	padding: 0 0.4em;
-	line-height: 1.5em;	
+	padding: 0 0.5rem;
+	line-height: 4rem;	
 }
 
 table {
-	background-color: red;
-	margin-top: 11em;
-	padding-left: 1em;
+	/*background-color: red;*/
+	margin-top: 7rem;
+	/*padding-left: 0.5rem;*/
 }
 
 #personRow {
-	background: green;
-	line-height: 5rem;
+	background: #4F618F;
+	line-height: 100%;
 }
 
 table input[type="text"] {
 	padding: 0 0.4em;
-	margin-right: 0.2em;
-	line-height: 4rem;
+	line-height: 6rem;
 	width: 10rem;
 	text-align: center;
+	font-size: 2.5rem;
+}
+
+#personRow input[type="text"] {
+	/*transform: rotate(-90deg)*/
+}
+
+.dishRow input[type="text"] {
+	width: 90%;
+	margin-left: -1rem;
 }
 
 table td {
 	text-align: center;
-	width: 18em;
-	/*max-width: 50%;*/
+	width: 15rem;
+}
+
+table tr:nth-of-type(2n) {
+	background: #7887AB;
+	margin-left: 0;
+}
+
+table tr td:first-of-type {
+	position: sticky;
+	left: 0.5rem;
+	/*margin-left: 0;*/
 }
 
 table tr td:last-of-type {
-	min-width: 1em;
-	width: 0;
+	min-width: 1rem;
+	/*width: -2rem;*/
 	text-align: center;
 
 }
@@ -91,15 +116,24 @@ table input[type="checkbox"] {
 }
 
 #totalsRow {
-	font-size: 1.5rem;
-	line-height: 1.5rem;
+	font-size: 2.5rem;
+	font-weight: bold;
+	line-height: 3.5rem;
+	/*margin: 2rem 0.1rem;*/
+	background:white;
+	border-top: 2px solid black;
 }
 
 #totalsRow td:first-of-type {
-	text-align: right;
-	padding-right: 1.2em;
+	text-align: center;
+	padding-right: 0em;
+}
+
+#shoppingCart {
+	text-align: center;
+	background: white;
+	margin-top: -1rem;
 }
 
 .fa-cart-plus {
-	margin-left: 2em;
 }

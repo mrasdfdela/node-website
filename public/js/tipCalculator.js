@@ -6,7 +6,7 @@ $(".fa-cart-plus").click(function(){
 	$("table tr:nth-last-child(2)").after(
 		'<tr class="dishRow">'
 		+'	<td>'
-		+'		<input type="text" name="d' + rowCount + '" placeholder="Dish' +(rowCount+1) + '">'
+		+'		<input type="text" name="d' + rowCount + '" placeholder="Dish $">'
 		+'	</td>'
 		+'</tr>'
 	)
@@ -19,7 +19,7 @@ $(".fa-cart-plus").click(function(){
 	}	
 
 	$("table tr:nth-last-child(2) td").last().after(
-		'<td class="dishSubTotal">0.00</td>'
+		'<td class="dishSubTotal">-</td>'
 	)
 
 	checkListeners()
@@ -40,7 +40,7 @@ $(".fa-user-plus").click(function(){
 		)
 	}
 	$("#totalsRow td:nth-last-child(2)").after(
-		'<td><p>P'+colCount+'Total</p></td>'
+		'<td><p>-</p></td>'
 	)
 
 	checkListeners()
