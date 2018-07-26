@@ -1,0 +1,27 @@
+<% include ../partials/header %>
+
+<div class="row">
+    <!--<div class="col-xs-4"></div>-->
+    <div class="col-xs-6 col-xs-offset-3">
+        <div>
+            <h3>New Recipe Input</h3>
+            <p>For adding new recipes and their descriptions to the webpage.</p>
+        </div>
+        <form action="/recipes" method="POST">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon3" name="newRecipe[title]" style="display:inline">
+                    <input type="text" class="form-control" placeholder="image URL" aria-describedby="basic-addon3" name="newRecipe[image]" style="display:inline">
+                </div>
+                <div class="input-group">
+                    <label for="coment">Enter in the recipe description here:</label>
+                    <br>
+                    <textarea rows="10" name="newRecipe[description]" style="width:157%"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>
+
+<% include ../partials/footer %>

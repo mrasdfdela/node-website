@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+<div class="row">
+    <% recipes.forEach(function(recipe){ %>
+            <div class="col-md-6">
+                <h3 style="position:absolute; top:-20px; color:white; background:rgba(0,0,0,0.5)"><%= recipe.title %></h3>
+                <img src="<%= recipe.image %>" class="img-responsive">
+                <div><%- recipe.description.substring(0,100) %>...<a href="/recipes/<%= recipe._id %>">(continue reading)</a></div>
+            </div>
+    <% }) %>
+</div>
+
+<a href="/recipes/new">
+    <span class="fa-layers fa-fw" style="position: fixed; right: 2em; bottom: 2em">
+        <i class="fas fa-circle fa-3x" data-fa-transform="left-4"style="color: silver; opacity: 0.5"></i>
+        <i class="fas fa-utensils fa-2x" style="color:#A63535; opacity: 0.5"></i>
+        <i class="fas fa-plus" data-fa-transform="left-13 up-12" style="color:#686868; opacity: 0.5"></i>
+    </span>
+</a>
+
+<% include ../partials/footer %>

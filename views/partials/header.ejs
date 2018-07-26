@@ -5,11 +5,11 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,400,700" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 	<nav class="navbar navbar-default navbar-fixed-top navbar-under-banner navbar-collapse">
 	  	
 	  	<div class="container-fluid">
@@ -27,8 +27,8 @@
 		    <!-- Navbar links and other content -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li><a href="./cycling">Cycling</a></li>
-		        <li><a href="./food">Food</a></li>
+		        <li><a href="./recipes">Recipes</a></li>
+		        <li><a href="./journal">Thoughts</a></li>
 		        <li class="dropdown"> <!-- hiking drop-down menu -->
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hiking <span class="caret"></span></a>
 		          <ul class="dropdown-menu scrollable-menu">
@@ -55,13 +55,21 @@
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Experimental <span class="caret"></span></a>
 		          <ul class="dropdown-menu scrollable-menu">
 		            <li><a href="./tipCalculator">Tip Calculator</a></li>
+			        <li><a href="./cycling">Cycling</a></li>
+			        <li><a href="./broken-link">404 Error</a></li>
 		          </ul>
 		        </li>
 		      </ul>
 	
 		      <ul class="nav navbar-nav navbar-right"> <!-- Misc. other navbar items-->
-		        <li><a href="./journal">Thoughts</a></li>
 		        <li><a href="./contact">Contact</a></li>
+		    	<% if(true){ %>
+		    		<li><a href="/login">Login</a></li>
+		    		<li><a href="/register">Signup</a></li>
+		    	<% } else { %>
+		    		<li><a href="/logout">Logout</a></li>
+		    		<li><a href="#">insert username here</a></li>
+		    	<% } %>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->

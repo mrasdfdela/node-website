@@ -1,0 +1,16 @@
+<% include ../partials/header %>
+
+    <div><%= recipe.title %></div>
+    <img src="<%= recipe.image %>">
+    <div><%= recipe.description %></div>3
+    <div>
+        <span>
+            <a  class="btn btn-info" href="./" style="float: left">← Back to Recipes</a>
+            <a class="btn btn-primary" href="./<%= recipe._id %>/edit" style="float: left; margin-left: 0.5em">Edit This Blog</a>
+            <form id="delete" action="/recipes/<%=recipe._id%>?_method=DELETE" method="POST" style="float: left; margin-left: 0.5em">
+                <button class="btn btn-danger">DELETE</button>
+            </form>
+            
+        </span>
+    
+<% include ../partials/footer %>    
