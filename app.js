@@ -14,7 +14,8 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(serveStatic(__dirname + "/img"));
 
-mongoose.connect("mongodb://localhost/jerrysBlog");
+// mongoose.connect("mongodb://mrasdfdela:q1w2e3r4@ds253871.mlab.com:53871/jerryswebpage_v2");
+mongoose.connect(process.env.DATABASEURL);
 
 app.get("/journal", function(req,res){  res.render("journal")  });
 app.get("/contact", function(req,res){  res.render("contact")  });
