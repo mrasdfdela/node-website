@@ -1,5 +1,20 @@
 <% include ./partials/header %>
 
+	<% if(error && error.length > 0){ %>
+		<div class="alert alert-danger" role="alert">
+			<%= error %>
+		</div>
+	<% } %>
+	<% if(success && success.length > 0){ %>
+		<div class="alert alert-success" role="alert">
+			<% if(!currentUser){ %>
+				<%= success %>
+			<% } else {%>
+				<%= success + " " + currentUser.username %>
+			<% } %>
+		</div>
+	<% } %>
+	
 	<p>Hello world! This is all (relatively) new to me: </p>
 	<ul>
 		<li>building a website</li>
