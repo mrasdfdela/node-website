@@ -42,17 +42,17 @@ router.get("/login", function(req, res){
 });
 router.post(
     "/login", 
-    passport.authenticate(
-        'local',
-        { 
-            successFlash: "Welcome, ",
-            failureFlash: "Please re-enter your credentials",
-            successRedirect: '/',
-            failureRedirect: '/login'
-        }
-    ),
     function(req, res){
-        
+        passport.authenticate(
+            "local",
+            {
+                failureRedirect: "/login", 
+                failureFlash: "Please re-enter your credentials"
+            }
+        )(req, res, function(){
+            req.flash("success", "Welcome, "+req.user.username+"!");
+            res.redirect("/")
+        });
     }
 )
 
