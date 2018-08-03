@@ -15,12 +15,14 @@
 		
 
 	<hr>
-
-	<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"><img src="https://farm2.staticflickr.com/1785/43533169501_bdd092520c_b.jpg" alt="mt. baldy"></div></div>
-	<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"><img src="https://farm1.staticflickr.com/834/43533168851_5a1cb64874_b.jpg" alt="sf sunrise"></div> </div>
-	<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"> <img src="https://farm2.staticflickr.com/1788/43533169831_59f71aeb67_b.jpg" alt="on the road again"></div> </div>
-	<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"> <img src="https://farm1.staticflickr.com/834/42628333355_842d18aac8_b.jpg"alt="bushkill falls"></div> </div>
-	<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"> <img src="https://farm1.staticflickr.com/840/43533169441_d18b3cf6ef_b.jpg" width="1024" height="576" alt="facebook break"></div> </div>
-	<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"> <img src="https://farm1.staticflickr.com/860/42628333675_ae3bb6ac3c_b.jpg"alt="friends in Thailand"></div> </div>
-
+	<% if(currentUser){ %>
+		<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"><img src="https://farm2.staticflickr.com/1785/43533169501_bdd092520c_b.jpg" alt="mt. baldy"></div></div>
+		<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"><img src="https://farm1.staticflickr.com/834/43533168851_5a1cb64874_b.jpg" alt="sf sunrise"></div> </div>
+		<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"> <img src="https://farm2.staticflickr.com/1788/43533169831_59f71aeb67_b.jpg" alt="on the road again"></div> </div>
+		<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"> <img src="https://farm1.staticflickr.com/834/42628333355_842d18aac8_b.jpg"alt="bushkill falls"></div> </div>
+		<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"> <img src="https://farm1.staticflickr.com/840/43533169441_d18b3cf6ef_b.jpg" width="1024" height="576" alt="facebook break"></div> </div>
+		<div class = "col-lg-6 col-md-6 col-sm-12 "><div class= "thumbnail"> <img src="https://farm1.staticflickr.com/860/42628333675_ae3bb6ac3c_b.jpg"alt="friends in Thailand"></div> </div>
+	<% } else { %>
+		<p>I've recently added authentication to this website. Many of the webpages, pictures and features are now <a href="/contact">password protected</a>.</p>
+	<% } %>
 <% include ./partials/footer %>

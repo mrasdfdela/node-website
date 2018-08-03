@@ -27,48 +27,52 @@
 		    <!-- Navbar links and other content -->
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      <ul class="nav navbar-nav">
-		        <li><a href="./recipes">Recipes</a></li>
-		        <li><a href="./journal">Thoughts</a></li>
-		        <li class="dropdown"> <!-- hiking drop-down menu -->
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hiking <span class="caret"></span></a>
-		          <ul class="dropdown-menu scrollable-menu">
-		            <li><a href="./california">Mount Tammany</a></li>
-		            <li><a href="./#">Random hike no 1</a></li>
-		            <li><a href="./#">Random hike no 2</a></li>
-		            <li><a href="./#">Random hike no 3</a></li>
-		            <li><a href="./#">Random hike no 4</a></li>
-		          </ul>
-		        </li>	        
-		        <li class="dropdown"> <!-- vacation drop-down menu -->
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Travel <span class="caret"></span></a>
-		          <ul class="dropdown-menu scrollable-menu">
-		            <li><a href="./california">California <div class="pull-right">Jan '15</div></a></li>
-		            <li><a href="./pch">Cali (PCH) <div class="pull-right">May '15</div> </a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="./asia">Asia <div class="pull-right">May '16</div></a></li>
-		            <li><a href="./grandcanyon">Grand Canyon <div class="pull-right">Oct '16</div></a></li>
-		            <li role="separator" class="divider"></li>
-		            <li><a href="./iceland">Iceland <div class="pull-right">June '17</div></a></li>
-		          </ul>
-		        </li>		        
+		        
+		        <% if(currentUser){ %>
+			        <li><a href="./recipes">Recipes</a></li>
+			        <li><a href="./journal">Thoughts</a></li>
+			        <li class="dropdown"> <!-- hiking drop-down menu -->
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hiking <span class="caret"></span></a>
+			          <ul class="dropdown-menu scrollable-menu">
+			            <li><a href="/california">Mount Tammany</a></li>
+			            <li><a href="/#">Random hike no 1</a></li>
+			            <li><a href="/#">Random hike no 2</a></li>
+			            <li><a href="/#">Random hike no 3</a></li>
+			            <li><a href="/#">Random hike no 4</a></li>
+			          </ul>
+			        </li>	        
+			        <li class="dropdown"> <!-- vacation drop-down menu -->
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Travel <span class="caret"></span></a>
+			          <ul class="dropdown-menu scrollable-menu">
+			            <li><a href="/#">California <div class="pull-right">Jan '15</div></a></li>
+			            <li><a href="/#">Cali (PCH) <div class="pull-right">May '15</div> </a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="/#">Asia <div class="pull-right">May '16</div></a></li>
+			            <li><a href="/#">Grand Canyon <div class="pull-right">Oct '16</div></a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="/#">Iceland <div class="pull-right">June '17</div></a></li>
+			            <li><a href="/#">Costa Rica <div class="pull-right">Dec '17</div></a></li>
+			          </ul>
+			        </li>
+		        <% } %>
+		        
 		        <li class="dropdown"> <!-- vacation drop-down menu -->
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Experimental <span class="caret"></span></a>
 		          <ul class="dropdown-menu scrollable-menu">
-		            <li><a href="./tipCalculator">Tip Calculator</a></li>
-			        <li><a href="./cycling">Cycling</a></li>
-			        <li><a href="./broken-link">404 Error</a></li>
+		            <li><a href="/tipCalculator">Tip Calculator</a></li>
+			        <li><a href="/cycling">Cycling</a></li>
+			        <li><a href="/broken-link">404 Error</a></li>
 		          </ul>
 		        </li>
 		      </ul>
 	
 		      <ul class="nav navbar-nav navbar-right"> <!-- Misc. other navbar items-->
 		        <li><a href="./contact">Contact</a></li>
-		    	<% if(true){ %>
+		    	<% if(!currentUser){ %>
 		    		<li><a href="/login">Login</a></li>
-		    		<li><a href="/register">Signup</a></li>
 		    	<% } else { %>
 		    		<li><a href="/logout">Logout</a></li>
-		    		<li><a href="#">insert username here</a></li>
+		    		<li><a href="#"><%= currentUser.username%></a></li>
 		    	<% } %>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->

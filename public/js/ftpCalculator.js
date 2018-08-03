@@ -9,7 +9,7 @@ var ftpText = [
     //     maxHR: ""
     // },
     { 
-        name: "Active Recover,
+        name: "Active Recovery",
         title: "Increase blood flow to muscles to flush out waste products and provide nutrients",
         maxHR: 0.56
     },
