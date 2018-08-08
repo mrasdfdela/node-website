@@ -8,17 +8,21 @@
 	<link rel="stylesheet" type="text/css" href="../../stylesheets/tipCalculator.css">
 
 	<div id="billHeader">
-		<div>
-			<div class="col" id="totalBillTest">Total Bill</div>
+		<div id="totalBillLabels">
+			<div class="col">Total Bill</div>
 			<div class="col">Tax %</div>
 			<div class="col">Tip %</div>
 			<div></div>
 		</div>
 		<div id="totalBillNums">
 			<div class="col">---</div>
-			<div class="col"><input id="taxPercent" type="text" name="taxPercent" value="6.625"></div>
-			<div class="col"><input id="tipPercent" type="text" name="tipPercent" value="18"></div>
-			<div><span><i class="fas fa-user-plus" data-fa-transform="left-5"></i></span></div>
+			<div class="col"><input id="taxPercent" type="number" name="taxPercent" value="6.625"></div>
+			<div class="col"><input id="tipPercent" type="number" name="tipPercent" value="18"></div>
+			<div>
+				<span>
+					<i class="fas fa-user-plus" data-fa-transform="left-5"></i>
+				</span>
+			</div>
 		</div>
 	</div>
 	<div class="row">
@@ -37,7 +41,7 @@
 				</tr>
 				<tr class="dishRow">
 					<td>
-						<input type="text" name="d0" placeholder="Dish Price">
+						<input type="number" name="d0" placeholder="Dish Price">
 					</td>
 					<td><input type="checkbox" class="d0 p0" name=""></td>
 					<td><input type="checkbox" class="d0 p1" name=""></td>
@@ -45,7 +49,7 @@
 
 				</tr>			
 				<tr class= "dishRow">
-					<td><input type="text" name="d1" placeholder="Dish Price"></td>
+					<td><input type="number" name="d1" placeholder="Dish Price"></td>
 					<td><input type="checkbox" class="d1 p0" name=""></td>
 					<td><input type="checkbox" class="d1 p1" name=""></td>
 					<td class="dishSubTotal">-</td>

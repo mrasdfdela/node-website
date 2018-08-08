@@ -6,7 +6,7 @@ $("#personRow td:first-of-type").click(function(){
 	$("table tr:nth-last-child(2)").after(
 		'<tr class="dishRow">'
 		+'	<td>'
-		+'		<input type="text" name="d' + rowCount + '" placeholder="Dish $">'
+		+'		<input type="number" name="d' + rowCount + '" placeholder="Dish Price">'
 		+'	</td>'
 		+'</tr>'
 	)
@@ -63,7 +63,7 @@ function checkListeners(){
 	}
 )}
 function dishListeners(){
-	$("input[type='text']").on("keyup", function(){
+	$("input[type='number']").on("keyup", function(){
 		dishSubTotals()
 		personSubTotals()
 		billTotal()
@@ -75,7 +75,7 @@ function dishSubTotals(){
 	var rowCount = $(".dishRow").length
 
 	for (var i=0;i<rowCount;i++) {
-		var dishPrice = $(".dishRow:eq("+i+") input[type='text']").val()
+		var dishPrice = $(".dishRow:eq("+i+") input[type='number']").val()
 		var checkedBoxes = $(".dishRow:eq("+i+") input[type='checkbox']:checked").length
 
 		if (dishPrice > 0 && checkedBoxes >0) {
