@@ -186,11 +186,8 @@ footer {
 	color: silver;
 }
 
-/* Styling for mobile */
-@media (any-pointer: coarse) {
-	.fa-plus {
-		right:75px; 
-		bottom: 10px; 
-		text-shadow: -1px 0 silver, 0 1px silver, 1px 0 silver, 0 -1px silver;
+@media screen and (max-width: 600px) {
+	nav {
+		display: none;
 	}
 }

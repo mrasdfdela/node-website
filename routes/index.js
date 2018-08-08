@@ -3,7 +3,8 @@ var express     = require("express"),
     passport    = require("passport"),
     bodyParser  = require("body-parser"),
     User        = require("../models/user"),
-    middleware  = require("../middleware");
+    middleware  = require("../middleware"),
+    device      = require("express-device");
 
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(function(req, res, next){
@@ -11,13 +12,21 @@ router.use(function(req, res, next){
     next();
 })
 
+router.use(device.capture());
+device.enableDeviceHelpers(router);
+device.enableViewRouting(router);
+
 router.get("/", function(req, res){  res.render("index")  });
 router.get("/journal", middleware.isLoggedIn, function(req,res){  res.render("journal")  });
 router.get("/contact", function(req,res){  res.render("contact")  });
 router.get("/hiking", middleware.isLoggedIn, function(req, res){  res.render("hiking")  });
 
-router.get("/tipcalculator", function(req, res){  res.render("tipCalculator")  });
 router.get("/cycling", function(req, res){  res.render("cycling")  });
+router.get("/tipcalculator", function(req, res){  
+    // var deviceType = req.device.type;
+    console.log(req.device.type)
+    res.render("tipCalculator", {deviceType: req.device.type});
+});
  
 // Temporary Registration Logic
 router.get("/register",function(req, res){
