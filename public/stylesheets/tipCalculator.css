@@ -62,7 +62,7 @@
 /* Person-Dish table */
 	table {
 		table-layout:auto;
-		/*display: block;*/
+		display: block;
 		max-width:100%;
 		position: relative;
 		top:7.5rem;
@@ -114,7 +114,6 @@
 		position: fixed;
 		top: 6.5rem;
 		left: 5rem;
-		/*opacity: 0.5;*/
 		padding-top: 0.5rem;
 	}
 	#addPersonMobile{
@@ -299,7 +298,7 @@
 		line-height: 6rem;
 		width: 10rem;
 		text-align: center;
-		font-size: 2.5rem;
+		/*font-size: 2.0rem;*/
 	}
 	
 	#personRow td:first-of-type {
@@ -307,13 +306,14 @@
 	}
 	
 	#personRow input[type="text"] {
-		/*transform: rotate(-90deg)*/
 		z-index: -1;
+		font-size: 2rem;
 	}
 	
 	.dishRow input[type="number"] {
 		width: 100%;
 		height: 5rem;
+		font-size: 2.5rem;
 	}
 	
 	table td {
