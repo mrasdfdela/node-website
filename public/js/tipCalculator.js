@@ -31,7 +31,7 @@ $(".fa-user-plus").click(function(){
 	console.log("step 1");
 	var colCount = $("#personRow td").length - 1
 	$("#personRow td:nth-last-child(2)").after(
-		'<td><input type="text" name="p'+colCount+'" placeholder="Person'+colCount+'2"></td>'
+		'<td><input type="text" name="p'+colCount+'" placeholder="Person '+colCount+'"></td>'
 	)
 	console.log("step 2");
 
