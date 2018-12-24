@@ -1,12 +1,12 @@
 /* global $*/
+
 // Add new item/dish
 $("#personRow td:first-of-type").click(function(){
-	console.log("what")
 	var rowCount = $("tr").length - 2
 	$("table tr:nth-last-child(2)").after(
 		'<tr class="dishRow">'
 		+'	<td>'
-		+'		<input type="number" name="d' + rowCount + '" placeholder="Dish Price">'
+		+'		<input type="text" name="d' + rowCount + '" placeholder="Dish Price">'
 		+'	</td>'
 		+'</tr>'
 	)
@@ -27,31 +27,26 @@ $("#personRow td:first-of-type").click(function(){
 })
 
 // Add new person
-$(".fa-user-plus").click(function(){
-	console.log("step 1");
+$("#addButtonTest").click(function(){
+	console.log("hello")
 	var colCount = $("#personRow td").length - 1
 	$("#personRow td:nth-last-child(2)").after(
-		'<td><input type="text" name="p'+colCount+'" placeholder="Person '+colCount+'"></td>'
+		'<td><input type="text" name="p'+colCount+'" placeholder="Person'+colCount+'2"></td>'
 	)
-	console.log("step 2");
 
 	var rowCount = $("tr").length - 2
 	for (var i=0; i<rowCount; i++) {
 		$(".dishRow:eq("+i+") td:nth-last-child(2)").after(
 			'<td><input type="checkbox" class="d'+i+' p'+ (colCount-1) +'" name=""></td>'
 		)
-	console.log("step 3");
 	}
 	$("#totalsRow td:nth-last-child(2)").after(
 		'<td><p>-</p></td>'
 	)
 	$("#shoppingCart td:last-of-type").after('<td></td>')
-	console.log("step 4");
 
 	checkListeners()
-	console.log("step 5");
 	dishListeners()
-	console.log("step 6");
 })
 
 // Add listeners for checkboxes & textboxes
@@ -63,7 +58,7 @@ function checkListeners(){
 	}
 )}
 function dishListeners(){
-	$("input[type='number']").on("keyup", function(){
+	$("input[type='text']").on("keyup", function(){
 		dishSubTotals()
 		personSubTotals()
 		billTotal()
@@ -75,7 +70,7 @@ function dishSubTotals(){
 	var rowCount = $(".dishRow").length
 
 	for (var i=0;i<rowCount;i++) {
-		var dishPrice = $(".dishRow:eq("+i+") input[type='number']").val()
+		var dishPrice = $(".dishRow:eq("+i+") input[type='text']").val()
 		var checkedBoxes = $(".dishRow:eq("+i+") input[type='checkbox']:checked").length
 
 		if (dishPrice > 0 && checkedBoxes >0) {
@@ -94,7 +89,7 @@ function personSubTotals(){
 	var taxAndTip = 1 + taxPercent + tipPercent
 
 	for (var i=0; i<personCount; i++){
-		personSubTotal = 0
+		var personSubTotal = 0
 		for (var j=0; j<rowCount; j++){
 			if ( $(".dishRow:eq("+j+") input[type='checkbox']:eq("+i+")").is(':checked') ) {
 				var dishSubTotal = $(".dishRow:eq("+j+") td:last").text().replace("$","")

@@ -1,193 +1,403 @@
-html {
-	font-size: 20px;
-}
-
-#taxPercent, #tipPercent{
-	max-width: 10rem;
-	text-align: center;
-}
-
-#billHeader{
-	position: fixed;
-	left: 0;
-	font-size: 2.7rem;
-	font-weight: 900;
+/* Styling for */
+@media (any-pointer: fine) {
+	html {
+		font-size: 1em;
+	}
+	input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	    -webkit-appearance: none;
+	    margin: 0;
+	}
+	.row {
+		/*padding-top: 0;*/
+		margin-top: 0;
+	}
 	
-	padding: 1rem 1rem;
-	margin: 0rem 0 1rem 0;
+/* Bill, tax% and tip% labels */
+	#billHeader{
+		position: fixed;
+		top: 5rem;
+		font-size: 1rem;
+		font-weight: 900;
+		z-index: 1;
+		text-align: center;
+	}
+	#billHeader div>div {
+		position: fixed;
+		top: 5rem;
+	}
+	
+	#totalBillLabels>div:nth-of-type(2) {
+		position: fixed;
+		left: 30%;	
+	}
+	#totalBillLabels>div:nth-of-type(3) {
+		position: fixed;
+		left: 60%;	
+	}
 
-	width: 100%;
-	/*background: #D6DBE8;*/
-	background: white;
-	height: 10rem;
-	z-index: 2;
-	/*border-bottom: 20px solid gray*/
+	#taxPercent, #tipPercent{
+		max-width: 5rem;
+		text-align: center;
+	}
+	
+	#totalBillNums input {
+		padding: 0 0.25rem;
+		line-height: 1.5rem;
+		width: 80%;
+	}
+	#totalBillNums>div:nth-of-type(1) {
+		position: fixed;
+		left:15%;
+	}
+	#totalBillNums>div:nth-of-type(2) {
+		position: fixed;
+		left:35%;
+	}
+	
+	#totalBillNums>div:nth-of-type(3) {
+		position: fixed;
+		left:65%;
+	}
+
+/* Person-Dish table */
+	table {
+		table-layout:auto;
+		display: block;
+		max-width:100%;
+		position: relative;
+		top:7.5rem;
+	}
+	table input[type="text"], table input[type="number"] {
+		padding: 0 0.4em;
+		line-height: 1rem;
+		/*width: 10rem;*/
+		text-align: center;
+		font-size: 1rem;
+	}
+	
+	table input[type="text"] {
+		width: 6rem;
+		height: 1.7rem;
+	}
+	table td {
+		text-align: center;
+		width: 1rem;
+	}
+	
+	#personRow {
+		z-index: 1;
+		
+	}
+	#personRow td:first-of-type {
+		background: #4F618F;
+	}	
+	#personRow td {
+		background: #4F618F;
+		line-height: 100%;
+		/*position: relative;*/
+		/*top: 1rem;*/
+	}
+	#addDishMobile {
+		display:none;
+	}
+	#addDishDesktop {
+		color:silver;
+		font-weight: 900;
+	}
+	#personRow input[type="text"] {
+		/*transform: rotate(-45deg);*/
+		/*z-index: -1;*/
+	}
+	
+	#addPersonDesktop {
+		color: gray;
+		position: fixed;
+		top: 6.5rem;
+		left: 5rem;
+		padding-top: 0.5rem;
+	}
+	#addPersonMobile{
+		display:none;
+	}
+
+	.dishRow input[type="number"] {
+		width: 100%;
+		height: 1.6rem;
+	}
+	
+	table tr:nth-of-type(2n-1) {
+		background: #7887AB;
+		/*margin-left: 0;*/
+	}
+	
+	table tr td:first-of-type {
+		position: sticky;
+		left: 0;
+		/*left: 0.5rem;*/
+		/*width: 30%;*/
+		min-width: 6rem
+	}
+	
+	table tr td {
+		/*min-width: 6rem;*/
+		border-left: 1px solid silver;
+	}
+	
+	table tr td:last-of-type {
+		min-width: 2rem;
+		width: 2rem;
+		text-align: center;
+		/*width: 10%;*/
+	}
+	
+	table input[type="checkbox"] {
+		width: 4rem;
+		height: 1rem;
+	}
+/* Subtotal Row of Table */
+	#totalsRow td {
+		/*width: 100%;*/
+		/*text-align: right;*/
+		/*background: blue;*/
+		/*margin-top: -1rem;*/
+		/*margin-bottom: 5rem;*/
+		/*height: 10rem;*/
+	
+		position: sticky;
+		bottom: 2rem;
+		background-color: white;
+		opacity: 0.9;
+		border-left: none;
+	}
+	#totalsRow {
+		font-size: 1rem;
+		line-height: 1.5rem;
+		background:white;
+		border-top: 2px solid silver;
+	}
+	
+	#totalsRow td:first-of-type {
+		text-align: center;
+		padding-right: 0em;
+	}
+	
+	
 }
 
-#billHeader div>div {
-	max-width: 30%;
-	text-align: center;
-}
-
-#billHeader>div>div:first-of-type {
-	position: fixed;
-	left: 0;
-}
-
-#billHeader>div>div:nth-of-type(2) {
-	position: fixed;
-	left: 30%;	
-}
-
-#billHeader>div>div:nth-of-type(3) {
-	position: fixed;
-	left: 60%;	
-}
-
-#totalBillNums>div {
-	position: fixed;
-	top: 5.5rem;
-}
-
-.fa-user-plus {
-	position: fixed;
-	right: 1.5rem;
-	padding-top: 1rem;
-}
-
-#totalBillNums input {
-	padding: 0 0.5rem;
-	line-height: 4rem;
-}
-
-table {
-	margin-top: 10rem;
-}
-
-#personRow td {
-	background: #4F618F;
-	line-height: 100%;
-	position: sticky;
-	top: 10em;
-	z-index: 2;
-}
-
-#personRow td:first-of-type {
-	z-index: 3;
-}
-
-table input[type="text"] {
-	padding: 0 0.4em;
-	line-height: 6rem;
-	width: 10rem;
-	text-align: center;
-	font-size: 2.5rem;
-}
-
-#personRow td:first-of-type {
-	background: #4F618F
-}
-
-#personRow input[type="text"] {
-	/*transform: rotate(-90deg)*/
-	z-index: -1;
-}
-
-.dishRow input[type="text"] {
-	width: 100%;
-}
-
-table td {
-	text-align: center;
-	width: 15rem;
-}
-
-table tr:nth-of-type(2n-1) {
-	background: #7887AB;
-	margin-left: 0;
-}
-
-table tr td:first-of-type {
-	position: sticky;
-	left: 0;
-	/*left: 0.5rem;*/
-	z-index: 1;
-	width: 30%;
-}
-
-table tr td {
-	width: 30%;
-}
-
-table tr td:last-of-type {
-	min-width: 1rem;
-	/*width: -2rem;*/
-	text-align: center;
-	width: 10%;
-}
-
-table input[type="checkbox"] {
-	width: 4rem;
-	height: 4rem;
-}
-
-#totalsRow {
-	font-size: 2.5rem;
-	font-weight: bold;
-	line-height: 5rem;
-	/*margin: 2rem 0.1rem;*/
-	background:white;
-	border-top: 2px solid black;
-}
-
-#totalsRow td:first-of-type {
-	text-align: center;
-	padding-right: 0em;
-}
+/* Styling for mobile */
+@media (any-pointer: coarse) {
 
 
-#totalsRow td {
-	/*width: 100%;*/
-	/*text-align: right;*/
-	/*background: blue;*/
-	/*margin-top: -1rem;*/
-	/*margin-bottom: 5rem;*/
-	/*height: 10rem;*/
-
-	position: sticky;
-	bottom: 2rem;
-	background-color: white;
-	opacity: 0.9;
-
-}
-
-footer {
-	font-size: 2rem;
-	background-color: white;
-
-	position: fixed;
-	bottom: 0rem;
-	left: 0;
-	text-align: right;
-	padding-right: 1em;
-	width: 100%;
-	z-index: 1;
-}
-
-.fa-user-plus {
-	color: dimgray;
-}
-
-.fa-plus {
-	color:#404040;
-}
-
-.fa-utensils {
-	color: silver;
-}
-
-@media screen and (max-width: 600px) {
-	nav {
+	html {
+	font-size: 20px;
+	}
+	
+	#taxPercent, #tipPercent{
+		max-width: 10rem;
+		text-align: center;
+	}
+	
+	#billHeader{
+		position: fixed;
+		left: 0;
+		font-size: 2.7rem;
+		font-weight: 900;
+		
+		padding: 1rem 1rem;
+		margin: 0rem 0 1rem 0;
+	
+		width: 100%;
+		/*background: #D6DBE8;*/
+		background: white;
+		height: 10rem;
+		z-index: 2;
+		/*border-bottom: 20px solid gray*/
+	}
+	
+	#billHeader div>div {
+		max-width: 30%;
+		text-align: center;
+	}
+	
+	#billHeader>div>div:first-of-type {
+		position: fixed;
+		left: 0;
+	}
+	
+	#billHeader>div>div:nth-of-type(2) {
+		position: fixed;
+		left: 30%;	
+	}
+	
+	#billHeader>div>div:nth-of-type(3) {
+		position: fixed;
+		left: 60%;	
+	}
+	#totalBillLabels>div {
+		top: 3.5em;
+	}
+	
+	#totalBillNums>div {
+		position: fixed;
+		top: 5.5em;
+	}
+	
+	#addPersonMobile .fa-user-plus {
+		color: dimgray;
+		position: fixed;
+		right: 1.5rem;
+		padding-top: 1rem;
+	}
+	
+	#addPersonMobile {
+		
+	}
+	
+	#addPersonDesktop {
 		display: none;
 	}
+	
+	#totalBillNums input {
+		padding: 0 0.5rem;
+		line-height: 4rem;
+	}
+	
+	table {
+		margin-top: 10rem;
+	}
+	
+	#personRow td {
+		background: #4F618F;
+		line-height: 100%;
+		position: sticky;
+		top: 10em;
+		z-index: 2;
+	}
+	
+	#addDishDesktop {
+		display:none;
+	}
+	.fa-circle {
+		color: silver; 
+		opacity: 0.8
+	}
+	.fa-plus {
+		position:relative;
+		right:75px; 
+		bottom: 10px; 
+
+		color:#404040;
+		opacity: 0.8;
+		text-shadow: -1px 0 silver, 0 1px silver, 1px 0 silver, 0 -1px silver;
+	}
+	.fa-utensils {
+		/*color: silver;*/
+		color:#A63535; 
+		opacity: 0.5;
+	}
+	
+	#personRow td:first-of-type {
+		z-index: 3;
+	}
+	
+	table input[type="text"], table input[type="number"] {
+		padding: 0 0.4em;
+		line-height: 6rem;
+		width: 10rem;
+		text-align: center;
+		/*font-size: 2.0rem;*/
+	}
+	
+	#personRow td:first-of-type {
+		background: #4F618F
+	}
+	
+	#personRow input[type="text"] {
+		z-index: -1;
+		font-size: 2rem;
+	}
+	
+	.dishRow input[type="number"] {
+		width: 100%;
+		height: 5rem;
+		font-size: 2.5rem;
+	}
+	
+	table td {
+		text-align: center;
+		width: 15rem;
+	}
+	
+	table tr:nth-of-type(2n-1) {
+		background: #7887AB;
+		margin-left: 0;
+	}
+	
+	table tr td:first-of-type {
+		position: sticky;
+		left: 0;
+		/*left: 0.5rem;*/
+		z-index: 1;
+		width: 30%;
+	}
+	
+	table tr td {
+		width: 30%;
+	}
+	
+	table tr td:last-of-type {
+		min-width: 1rem;
+		/*width: -2rem;*/
+		text-align: center;
+		width: 10%;
+	}
+	
+	table input[type="checkbox"] {
+		width: 4rem;
+		height: 4rem;
+	}
+	
+	#totalsRow {
+		font-size: 2.5rem;
+		font-weight: bold;
+		line-height: 5rem;
+		/*margin: 2rem 0.1rem;*/
+		background:white;
+		border-top: 2px solid black;
+	}
+	
+	#totalsRow td:first-of-type {
+		text-align: center;
+		padding-right: 0em;
+	}
+	
+	
+	#totalsRow td {
+		/*width: 100%;*/
+		/*text-align: right;*/
+		/*background: blue;*/
+		/*margin-top: -1rem;*/
+		/*margin-bottom: 5rem;*/
+		/*height: 10rem;*/
+	
+		position: sticky;
+		bottom: 2rem;
+		background-color: white;
+		opacity: 0.9;
+	
+	}
+	
+	footer {
+		font-size: 2rem;
+		background-color: white;
+	
+		position: fixed;
+		bottom: 0rem;
+		left: 0;
+		text-align: right;
+		padding-right: 1em;
+		width: 100%;
+		z-index: 1;
+	}
+
 }

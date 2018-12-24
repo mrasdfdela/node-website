@@ -1,14 +1,18 @@
-<% if(is_phone){%>
-	<% include ./partials/headerMobile %>	
-<% } else if (is_desktop) { %>
-	<% include ./partials/header %>
-<% } %>
+<!--include ./partials/header-->
 
+<!DOCTYPE html>
+<html>
+<head>
 	<title>Tip Calculator</title>
 	<link rel="stylesheet" type="text/css" href="../../stylesheets/tipCalculator.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+</head>	
 
+
+<body>
 	<div id="billHeader">
-		<div id="totalBillLabels">
+		<div>
 			<div class="col">Total Bill</div>
 			<div class="col">Tax %</div>
 			<div class="col">Tip %</div>
@@ -16,32 +20,19 @@
 		</div>
 		<div id="totalBillNums">
 			<div class="col">---</div>
-			<div class="col"><input id="taxPercent" type="number" name="taxPercent" value="6.625"></div>
-			<div class="col"><input id="tipPercent" type="number" name="tipPercent" value="18"></div>
-			<div>
-				<span id="addPersonMobile">
-					<i class="fas fa-user-plus"></i>
-				</span>
-			</div>
+			<div class="col"><input id="taxPercent" type="text" name="taxPercent" value="6.625"></div>
+			<div class="col"><input id="tipPercent" type="text" name="tipPercent" value="18"></div>
+			<div id="addButtonTest"><span><i class="fas fa-user-plus"></i></span></div>
 		</div>
 	</div>
 	<div class="row">
-			<span id="addPersonDesktop">
-				<i class="fas fa-user-plus fa-stack"></i>
-			</span>
 			<table>
 				<tr id="personRow">
 					<td>
-						<div id="addDishMobile">
-							<span class="fa-stack fa-2x">
-						        <i class="fas fa-circle fa-stack-2x"></i>
-						        <i class="fas fa-utensils fa-stack"></i>
-							</span>
-					        <i class="fas fa-plus"></i>
-						</div>
-						<div id="addDishDesktop">
-							Add Dish
-						</div>
+						<span class="fa-layers fa-fw">
+							<i class="fas fa-utensils fa-2x"></i>
+							<i class="fas fa-plus fa-1x" data-fa-transform="left-13 up-12" style="text-shadow: 0px 0px 3px #000"></i>
+						</span>
 					</td>
 					<td><input type="text" name="p0" placeholder="Person 1"></td>
 					<td><input type="text" name="p1" placeholder="Person 2"></td>
@@ -49,7 +40,7 @@
 				</tr>
 				<tr class="dishRow">
 					<td>
-						<input type="number" name="d0" placeholder="Dish Price">
+						<input type="text" name="d0" placeholder="Dish Price">
 					</td>
 					<td><input type="checkbox" class="d0 p0" name=""></td>
 					<td><input type="checkbox" class="d0 p1" name=""></td>
@@ -57,7 +48,7 @@
 
 				</tr>			
 				<tr class= "dishRow">
-					<td><input type="number" name="d1" placeholder="Dish Price"></td>
+					<td><input type="text" name="d1" placeholder="Dish Price"></td>
 					<td><input type="checkbox" class="d1 p0" name=""></td>
 					<td><input type="checkbox" class="d1 p1" name=""></td>
 					<td class="dishSubTotal">-</td>
@@ -81,10 +72,10 @@
 				</tr>
 			</table> -->
 	</div>
-	<script type="text/javascript" src="/js/tipCalculator.js"></script>
+	<footer><a href="https://vast-fortress-15122.herokuapp.com/">Return to My Webpage</a></footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../../js/tipCalculator.js"></script>
+</html>
 
-<% if(is_phone){%>
-	<% include ./partials/footerMobile %>	
-<% } else if (is_desktop) { %>
-	<% include ./partials/footer %>
-<% } %>
+<!--include ./partials/footer-->
